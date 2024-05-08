@@ -31,7 +31,7 @@ export default function ContentList({
   const [hovering, setHovering] = useState(false);
   const lastMousePos = useRef({ x: 0, y: 0 });
 
-  const urlPrefix = contentType === "Blog" ? "/blog" : "/project";
+  const urlPrefix = contentType === "Blog" ? "/blog" : "/projects";
 
   useEffect(() => {
     // Animate list-items in with a stagger
@@ -55,7 +55,7 @@ export default function ContentList({
               end: "bottom center",
               toggleActions: "play none none none",
             },
-          }
+          },
         );
       });
 
@@ -149,7 +149,7 @@ export default function ContentList({
                   itemsRef.current[index] = el;
                 }}
                 onMouseEnter={() => onMouseEnter(index)}
-                className="list-item opacity-0f"
+                className="list-item opacity-0"
               >
                 <Link
                   href={urlPrefix + "/" + item.uid}
