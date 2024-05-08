@@ -25,7 +25,7 @@ export default function Shapes() {
             blur={1}
             far={9}
           />
-          <Environment preset="studio" />
+          <Environment preset="warehouse" />
         </Suspense>
       </Canvas>
     </div>
@@ -35,27 +35,27 @@ export default function Shapes() {
 function Geometries() {
   const geometries = [
     {
-      position: [0, 0, 0],
+      position: [0.8, 0, 0],
       r: 0.3,
       geometry: new THREE.IcosahedronGeometry(3), //Gem
     },
     {
-      position: [1, -0.75, 4],
+      position: [1.3, -0.75, 4],
       r: 0.4,
       geometry: new THREE.CapsuleGeometry(0.5, 1.6, 2, 16), //Pill
     },
     {
-      position: [-1.4, 2, -4],
+      position: [-0.4, 2, -4],
       r: 0.6,
       geometry: new THREE.DodecahedronGeometry(1.5), //Soccer
     },
     {
-      position: [-0.8, -0.75, 5],
+      position: [-0.5, -0.75, 5],
       r: 0.5,
-      geometry: new THREE.TorusKnotGeometry(0.6, 0.25, 16, 32), //Knot
+      geometry: new THREE.TorusKnotGeometry(0.8, 0.25, 16, 32), //Knot
     },
     {
-      position: [1.6, 1.6, -4],
+      position: [2.6, 2, -4],
       r: 0.7,
       geometry: new THREE.OctahedronGeometry(3), //Diamond
     },
@@ -69,13 +69,13 @@ function Geometries() {
     new THREE.MeshStandardMaterial ({ color: 0x8e44ad, roughness: 0.1 }),
     new THREE.MeshStandardMaterial ({ color: 0x1abc9c, roughness: 0.1 }),
     new THREE.MeshStandardMaterial ({
-        roughness: 0,
-        metalness: 0.5,
+        roughness: 0.2,
+        metalness: 0.6,
         color: 0x2980b9,
     }),
     new THREE.MeshStandardMaterial ({
-        roughness: 0.1,
-        metalness: 0.5,
+        roughness: 0.2,
+        metalness: 0.6,
         color: 0x2c3e50,
     })
   ];
@@ -86,14 +86,10 @@ function Geometries() {
     new Audio("/sounds/tap3.ogg"),
     new Audio("/sounds/tap4.ogg"),
     new Audio("/sounds/tap5.ogg"),
-    new Audio("/sounds/tap6.ogg"),
-    new Audio("/sounds/tap7.ogg"),
     new Audio("/sounds/tap8.ogg"),
-    new Audio("/sounds/tap9.ogg"),
     new Audio("/sounds/tap10.ogg"),
     new Audio("/sounds/tap11.ogg"),
     new Audio("/sounds/tap12.ogg"),
-    new Audio("/sounds/tap13.ogg"),
   ]
 
   return geometries.map(({ position, r, geometry }) => (
