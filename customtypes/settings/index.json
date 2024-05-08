@@ -52,14 +52,6 @@
           "placeholder": ""
         }
       },
-      "twitter": {
-        "type": "Link",
-        "config": {
-          "label": "Twitter",
-          "placeholder": "",
-          "select": null
-        }
-      },
       "github": {
         "type": "Link",
         "config": {
